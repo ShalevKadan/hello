@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "shalevaksdemo-6795"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "shalevaksdemo-6795"
+  template:
+    metadata:
+      labels:
+        app: "shalevaksdemo-6795"
+    spec:
+      containers:
+        - name: "shalevaksdemo-6795"
+          image: "arcdemo8201.azurecr.io/shalevaksdemo"
+          ports:
+          - containerPort: 80
